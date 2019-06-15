@@ -1,0 +1,36 @@
+
+<div>
+  <form [formGroup]="rForm">
+    
+
+        <h2 style="font-family: Courier New Lucida Console;">LOGIN</h2>
+        <div class="form-group">
+          <label class="control-label">Email
+            
+          </label>
+          <div class="inputGroupContainer">
+            <div class="input-group">
+            <input type="email" id="email" name="email" formControlName="email" class="form-control">
+            <div class="alert" *ngIf="!rForm.controls['email'].valid && rForm.controls['email'].touched">{{ titleAlert }}</div>
+            </div>
+          </div>
+      </div>
+
+        <div class="form-group">
+        <label class="control-label">Password
+        </label>
+        <div class="inputGroupContainer">
+          <div class="input-group">
+            <input type="password" formControlName="password" class="form-comtrol">
+            <div class="alert" *ngIf="!rForm.controls['password'].valid && rForm.controls['password'].touched">This field is required</div>
+          </div>
+        </div>         
+        </div>
+        <button class="button expanded" [disabled]="!rForm.valid" (click)="check(rForm.value)">Submit</button>
+        <div style="margin-top:3%;">{{invalidUnamePass}}</div>
+
+
+  </form>
+</div>
+
+

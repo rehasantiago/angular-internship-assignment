@@ -1,0 +1,8 @@
+th{
+    color:white;
+    background-color: #5dade2;
+}
+td,th{
+    border: 1px solid #ddd;
+    padding: 8px;
+}

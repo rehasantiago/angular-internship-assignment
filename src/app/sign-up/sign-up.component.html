@@ -1,0 +1,71 @@
+<div>
+  <form [formGroup]="rForm">
+   
+
+        <h2 style="padding-left:30%; font-family: Courier New Lucida Console;">Sign Up</h2>
+
+        <div class="form-group">
+        <label>First Name
+        </label>
+        <div class="inputGroupContainer">
+        <div class="input-group">
+          <input type="text" class="form-control" formControlName="fname" #fname>
+          <div class="alert" *ngIf="!rForm.controls['fname'].valid && rForm.controls['fname'].touched">{{ titleAlert }}</div>
+        </div>
+        </div>
+        </div>
+        <div class="form-group">
+        <label>Last Name
+        </label>
+        <div class="inputGroupContainer">
+        <div class="input-group">
+          <input type="text" class="form-control" formControlName="lname" #lname>
+          <div class="alert" *ngIf="!rForm.controls['lname'].valid && rForm.controls['lname'].touched">This field is required</div>
+        </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Job Title
+        </label>
+        <div class="inputGroupContainer">
+        <div class="input-group">
+          <input type="text" formControlName="jobTit" #jobTit>
+          <div class="alert" *ngIf="!rForm.controls['jobTit'].valid && rForm.controls['jobTit'].touched">This field is required</div>
+        </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Twitter
+        </label>
+        <div class="inputGroupContainer">
+        <div class="input-group">
+          <input type="text" formControlName="twitter" #twitter>
+          <div class="alert" *ngIf="!rForm.controls['twitter'].valid && rForm.controls['twitter'].touched">This field is required</div>
+        </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>E-mail
+        </label>
+        <div class="inputGroupContainer">
+        <div class="input-group">
+          <input type="email" formControlName="email" #email>
+          <div class="alert" *ngIf="!rForm.controls['email'].valid && rForm.controls['email'].touched">This field is required</div>
+        </div>
+        </div>
+      </div>
+      <div class="form-group">
+        <label>Password
+        </label>
+        <div class="inputGroupContainer">
+        <div class="input-group">
+          <input type="password" formControlName="password" #password>
+          <div class="alert" *ngIf="!rForm.controls['password'].valid && rForm.controls['password'].touched">This field is required</div>
+      </div>
+      </div>
+      </div>
+        <button class="button expanded" [disabled]="!rForm.valid" (click)="onAddUser(fname.value,lname.value,jobTit.value,twitter.value,email.value,password.value)">Submit</button>
+
+  </form>
+</div>
+
