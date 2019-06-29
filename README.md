@@ -1,5 +1,5 @@
 # angular-internship-assignment
-An angular application that consists of a sign in,login and a hompage component 
+An angular application consisting of a sign in,login and a hompage component 
 ## To install all the dependencies
 npm install
 ## To run the application
